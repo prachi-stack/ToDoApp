@@ -57,8 +57,7 @@ The server will start on port 5000 by default.
 - `POST /api/documents` - Create a new document
 - `GET /api/documents/:id` - Get a specific document
 - `PUT /api/documents/:id` - Update a document
-- `DELETE /api/documents/:id` - Delete a document
-
+ 
 ## Project Structure
 
 - `config/` - Database configuration
