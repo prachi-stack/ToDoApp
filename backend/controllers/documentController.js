@@ -85,23 +85,4 @@ export const updateDocument = async (req, res) => {
   }
 };
 
-export const deleteDocument = async (req, res) => {
-  try {
-    const documentId = req.params.id;
-
-    if (!mongoose.Types.ObjectId.isValid(documentId)) {
-      return res.status(400).json({ error: "Invalid document ID format" });
-    }
-
-    const deletedDocument = await Document.findByIdAndDelete(documentId);
-
-    if (!deletedDocument) {
-      return res.status(404).json({ error: "Document not found" });
-    }
-
-    res.status(200).json({ message: "Document deleted successfully" });
-  } catch (error) {
-    console.error("Failed to delete document", error);
-    res.status(500).json({ error: "Failed to delete document" });
-  }
-};
+ 
